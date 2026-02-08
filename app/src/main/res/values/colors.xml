@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="surfaceDark">#323232</color>
+    <color name="badmintonBlue">#2196F3</color>
+    <color name="textPrimaryDark">#FFFFFF</color>
+    <color name="textSecondaryDark">#2196F3</color>
+    <color name="bg_main">#202020</color>
+    <color name="text_muted">#B0BEC5</color>
+</resources>

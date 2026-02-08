@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/bg_main">
+
+    <TextView
+        android:id="@+id/tv_add_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nieuwe Match"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_opponent"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:hint="Naam Tegenstander"
+        android:textColorHint="@color/text_muted"
+        app:boxStrokeColor="@color/badmintonBlue"
+        app:hintTextColor="@color/badmintonBlue"
+        app:layout_constraintTop_toBottomOf="@id/tv_add_title">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_opponent_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_score"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Score (bijv. 21-15, 21-12)"
+        android:textColorHint="@color/text_muted"
+        app:boxStrokeColor="@color/badmintonBlue"
+        app:layout_constraintTop_toBottomOf="@id/til_opponent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_score"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <RadioGroup
+        android:id="@+id/rg_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/til_score">
+
+        <RadioButton
+            android:id="@+id/rb_won"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Winst"
+            android:textColor="@color/white"
+            android:buttonTint="@color/badmintonBlue"
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/rb_verlies"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:text="Verlies"
+            android:textColor="@color/white"
+            android:buttonTint="#FF5252" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="16dp"
+        android:text="Match Opslaan"
+        android:backgroundTint="@color/badmintonBlue"
+        app:cornerRadius="12dp"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
